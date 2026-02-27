@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ilias Laoukili} \\ \vspace{2pt}
+    \href{https://www.linkedin.com/in/ilias-laoukili}{\color{MidnightBlue}\faLinkedin\ linkedin.com/in/ilias-laoukili} $|$
+    \href{mailto:ilias.laoukili@proton.me}{\color{MidnightBlue}\faEnvelope\ ilias.laoukili@proton.me} $|$
+    \href{https://github.com/ilias-laoukili}{\color{MidnightBlue}\faGithub\ github.com/ilias-laoukili} $|$
+    \href{https://laoukili.com}{\color{MidnightBlue}\faGlobe\ laoukili.com} \\
+    \small Paris region, France
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+    Building RAG and GNN systems at the intersection of AI \& Cybersecurity, with active research experience at LAMA (Université Gustave Eiffel) and an upcoming R\&D internship at Nanyang Polytechnic, Singapore.
+}
+\vspace{-12pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Université Laval}{Québec, Canada}
+    {Dual Degree Program (Incoming)}{Starting Fall 2026}
+    \resumeItemListStart
+      \resumeItem{Selected for an international dual degree in Computer Science/AI, complementing the French engineering curriculum.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ESIEE Paris}{Noisy-le-Grand, France}
+    {M.Eng. in Artificial Intelligence \& Cybersecurity (Grande École)}{2024 -- 2027}
+    \resumeItemListStart
+      \resumeItem{State-recognized engineering degree. Curriculum: Machine Learning, Computer Vision, Data Science, Cybersecurity.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Lycée Gustave Monod}{Enghien-les-Bains, France}
+    {Classes Préparatoires aux Grandes Écoles (CPGE)}{2021 -- 2024}
+    \resumeItemListStart
+      \resumeItem{Intensive preparation in Math \& Physics (MPSI/PCSI/PC) for French engineering school entrance exams.}
+    \resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {R\&D Engineering Intern (Incoming)}{May 2026 -- July 2026}
+    {Nanyang Polytechnic (NYP)}{Singapore}
+    \resumeItemListStart
+      \resumeItem{Will develop an AI-powered system for green building energy simulation, engineering a \textbf{RAG} framework to make \textbf{EnergyPlus} accessible via natural language queries.}
+      \resumeItem{Will collaborate with research teams to optimize energy efficiency simulations through applied AI algorithms.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Research Assistant (Tremplin Recherche)}{Nov. 2025 -- Present}
+    {Université Gustave Eiffel / LAMA}{Champs-sur-Marne, France}
+    \resumeItemListStart
+      \resumeItem{Investigating trade-offs between Graph Neural Network (GNN) performance and computational efficiency via graph sparsification.}
+      \resumeItem{Analyzing graph topology and sparsification patterns to reduce GNN computational overhead without accuracy degradation.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Academic Tutor \& Private Instructor}{Sep 2021 -- Present}
+    {Complétude, Parkours, ESIEE Paris}{Paris Region, France}
+    \resumeItemListStart
+      \resumeItem{Tutoring 45+ students in Math/CS; improving academic performance by 30\% through personalized guidance.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{\href{https://github.com/ilias-laoukili/sentim-app}{\color{MidnightBlue}Sentim — AI-Powered Audio Emotion Analysis}} $|$ \emph{Python, Streamlit, Librosa}}{Nov 2025}
+    \resumeItemListStart
+      \resumeItem{Developed a hybrid analysis platform combining DSP with Machine Learning to classify 8 emotions from speech.}
+      \resumeItem{Implemented a Random Forest classifier (RAVDESS dataset) using MFCCs, Chroma, and Tonnetz features.}
+      \resumeItem{Built a Streamlit dashboard for real-time acoustic visualization and prosody manipulation.}
+    \resumeItemListEnd
+
+  % Placeholder for Second Project - Uncomment and fill when ready
+  % \resumeProjectHeading
+  %   {\textbf{Project Name} $|$ \emph{Tech Stack 1, Tech Stack 2}}{Date}
+  %   \resumeItemListStart
+  %     \resumeItem{Description of the key feature or algorithm developed.}
+  %     \resumeItem{Quantifiable result or technical challenge overcome.}
+  %   \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Core \& AI}{: Python, C, SQL, PyTorch Geometric, Scikit-learn, GNNs, RAG/LLM, DSP (Librosa)} \\
+    \textbf{Tools \& Dev}{: Git/GitHub, Docker, CI/CD, Streamlit, Hydra, Linux, Wireshark, MongoDB, EnergyPlus} \\
+    \textbf{Certifications}{: MongoDB Associate Developer, Harvard CS50's \textit{Introduction to AI with Python}} \\
+    \textbf{Languages}{: French (Native), English \& German (Full Professional C1/C2 — Abibac)}
+  }}
+\end{itemize}
+
+%-----------ADDITIONAL ACTIVITIES-----------
+\section{Additional Activities}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Volunteer}{Aug 2025 -- Present}
+    {French Red Cross}{Puteaux, France}
+    \resumeItemListStart
+      \resumeItem{Contributing to community outreach and logistics, supporting over 200 families.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
