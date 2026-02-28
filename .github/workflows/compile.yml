@@ -19,12 +19,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Ensure output directory exists
+        run: mkdir -p output
+
       - name: Compile LaTeX to PDF
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/main.tex
           latexmk_use_pdflatex: true
-          args: -pdf -outdir=../output -interaction=nonstopmode -file-line-error
+          args: -pdf -outdir=output -interaction=nonstopmode -file-line-error
 
       - name: Rename output PDF
         run: mv output/main.pdf resume.pdf
