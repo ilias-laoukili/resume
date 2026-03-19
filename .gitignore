@@ -26,3 +26,6 @@ output/
 
 # macOS
 .DS_Store
+
+# tools
+.claude/
