@@ -1,6 +1,6 @@
 # Resume — Ilias Lkl
 
-A single-page professional CV written in LaTeX, automatically compiled to PDF via GitHub Actions on every push to `main`.
+Professional CVs written in LaTeX, automatically compiled to PDF via GitHub Actions on every push to `main`.
 
 ---
 
@@ -15,10 +15,11 @@ A single-page professional CV written in LaTeX, automatically compiled to PDF vi
 ```
 .
 ├── src/
-│   └── main.tex        # LaTeX source
+│   ├── cv_industry.tex          # Industry-focused CV
+│   └── cv_research_academic.tex # Research / academic CV
 ├── .github/
 │   └── workflows/
-│       └── compile.yml # CI/CD pipeline
+│       └── compile.yml          # CI/CD pipeline
 ├── .gitignore
 └── README.md
 ```
@@ -35,14 +36,14 @@ git clone https://github.com/ilias-laoukili/resume.git
 cd resume
 
 # Option A — pdflatex (two passes for cross-references)
-pdflatex -output-directory=. src/main.tex
-pdflatex -output-directory=. src/main.tex
+pdflatex -output-directory=output src/cv_industry.tex
+pdflatex -output-directory=output src/cv_industry.tex
 
 # Option B — latexmk (handles passes automatically)
-latexmk -pdf -outdir=. src/main.tex
+latexmk -pdf -outdir=output src/cv_industry.tex
 ```
 
-The output file `main.pdf` will appear in the project root.
+Replace `cv_industry` with `cv_research_academic` to compile the academic variant.
 
 ---
 

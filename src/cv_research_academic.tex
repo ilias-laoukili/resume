@@ -1,0 +1,207 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ilias Laoukili} \\ \vspace{1pt}
+    \small Incoming M.Sc. Student (Research Track) at Universit\'{e} Laval \\ \vspace{2pt}
+    \href{mailto:ilias.laoukili@ulaval.ca}{\color{MidnightBlue}\faEnvelope\ ilias.laoukili@ulaval.ca} $|$
+    \href{https://github.com/ilias-laoukili}{\color{MidnightBlue}\faGithub\ github.com/ilias-laoukili} $|$
+    \href{https://www.linkedin.com/in/ilias-laoukili}{\color{MidnightBlue}\faLinkedin\ in/ilias-laoukili} $|$
+    \href{https://laoukili.com}{\color{MidnightBlue}\faGlobe\ laoukili.com}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+    Applied Machine Learning \& Systems Engineer specializing in Core ML architectures and Cybersecurity. Officially admitted to the M.Sc. (Research) program at Universit\'{e} Laval for Fall 2026. Proven ability to bridge theoretical Deep Learning with low-level systems engineering (Rust, Bash) to optimize, scale, and secure AI models.
+}
+\vspace{-12pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Universit\'{e} Laval}{Qu\'{e}bec, QC, Canada}
+    {Incoming M.Sc. in Computer Science \& AI (Dual Degree)}{Starting Fall 2026}
+    \resumeItemListStart
+      \resumeItem{Status: Officially admitted by the administration to the Research Track (Ma\^{i}trise avec m\'{e}moire).}
+      \resumeItem{Focus: Applied Machine Learning, Cybersecurity, and ML Systems.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ESIEE Paris}{Noisy-le-Grand, France}
+    {M.Eng. in Artificial Intelligence \& Cybersecurity (Grande \'{E}cole)}{2024 -- 2027}
+    \resumeItemListStart
+      \resumeItem{\textbf{Current GPA: 16.08/20} (Top tier of cohort).}
+      \resumeItem{\textbf{Key Excellence Grades:} Introduction to Cybersecurity (19.6/20), Software Security (19.5/20), Deep Learning (19.0/20), Graph Algorithms (18.0/20).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Lyc\'{e}e Gustave Monod}{Enghien-les-Bains, France}
+    {Classes Pr\'{e}paratoires aux Grandes \'{E}coles (CPGE)}{2021 -- 2024}
+    \resumeItemListStart
+      \resumeItem{Intensive undergraduate preparation in Advanced Mathematics and Physics.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH & APPLIED ENGINEERING EXPERIENCE-----------
+\section{Research \& Applied Engineering Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Research Assistant (ML Systems \& Graph Neural Networks)}{Nov. 2025 -- Present}
+    {Universit\'{e} Gustave Eiffel / LAMA}{Champs-sur-Marne, France}
+    \resumeItemListStart
+      \resumeItem{Investigating deterministic graph sparsification to optimize Graph Neural Network (GNN) training and computational efficiency.}
+      \resumeItem{Engineering Focus: Architected a high-performance synthetic graph generator in \textbf{Rust} (\href{https://github.com/ilias-laoukili/synth-graph-rs}{\color{MidnightBlue}synth-graph-rs}) to overcome native Python computational bottlenecks.}
+      \resumeItem{Implemented parallelized execution pipelines using \textbf{Bash} scripting to mitigate Out-Of-Memory (\textbf{OOM mitigation}) errors during massive hyperparameter sweeps.}
+      \resumeItem{Designed empirical evaluation frameworks using PyTorch Geometric to analyze error landscape smoothing.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {R\&D Engineering Intern (Applied AI \& Systems)}{May 2026 -- July 2026}
+    {Nanyang Polytechnic (NYP)}{Singapore}
+    \resumeItemListStart
+      \resumeItem{Developing an AI-powered RAG framework for green building energy simulations.}
+      \resumeItem{Bridging NLP and engineering systems by making complex EnergyPlus architectures queryable via natural language.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Applied Software Security \& Vulnerability Exploitation} $|$ \emph{ESIEE Paris}}{}
+    \resumeItemListStart
+      \resumeItem{\textbf{Reverse Engineering:} Conducted low-level analysis on stripped x86-64 Linux binaries using GDB/objdump. Bypassed ptrace anti-debugging and code integrity constraints via byte patching, and developed automated keygens in C.}
+      \resumeItem{\textbf{Web Security:} Automated Blind SQL Injection data extraction by developing a custom Python exploit script, demonstrating practical database compromise capabilities.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\href{https://github.com/ilias-laoukili/sentim-app}{\color{MidnightBlue}Sentim -- Deep Learning for Audio Emotion Analysis}} $|$ \emph{Python, Librosa, PyTorch, Streamlit}}{Nov 2025}
+    \resumeItemListStart
+      \resumeItem{Engineered an end-to-end Machine Learning pipeline combining Digital Signal Processing (Librosa) with Deep Learning architectures.}
+      \resumeItem{Processed raw audio into 2D spectrograms and evaluated multiple architectures, including a custom 2-layer CNN and a fine-tuned ResNet, outperforming baseline Random Forest models. Deployed via a real-time Streamlit dashboard.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Systems \& Low-Level}{: Rust, C, Bash (Parallel execution), Linux, Memory Management (OOM mitigation)} \\
+    \textbf{Applied AI \& ML}{: Python, PyTorch Geometric, CNNs/ResNet, GNNs, RAG/LLM architectures, Scikit-learn} \\
+    \textbf{Cybersecurity}{: Reverse Engineering (GDB, objdump), Vulnerability Exploitation, Wireshark, Software/System Security Auditing} \\
+    \textbf{Tools \& DevOps}{: Git, Docker, CI/CD, MongoDB}
+  }}
+\end{itemize}
+
+\end{document}
