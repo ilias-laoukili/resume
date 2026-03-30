@@ -19,26 +19,38 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX to PDF
+      - name: Compile industry CV
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/cv_industry.tex
           work_in_root_file_dir: true
 
-      - name: Rename output PDF
-        run: mv src/cv_industry.pdf resume.pdf
+      - name: Compile academic CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv_research_academic.tex
+          work_in_root_file_dir: true
 
-      - name: Upload PDF artifact
+      - name: Collect PDFs
+        run: |
+          mv src/cv_industry.pdf cv_industry.pdf
+          mv src/cv_research_academic.pdf cv_research_academic.pdf
+
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: resume
-          path: resume.pdf
+          name: cvs
+          path: |
+            cv_industry.pdf
+            cv_research_academic.pdf
           retention-days: 90
 
       - name: Publish to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: Latest CV
-          files: resume.pdf
+          name: Latest CVs
+          files: |
+            cv_industry.pdf
+            cv_research_academic.pdf
           make_latest: true

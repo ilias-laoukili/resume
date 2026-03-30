@@ -6,7 +6,12 @@ Professional CVs written in LaTeX, automatically compiled to PDF via GitHub Acti
 
 ## Quick View
 
-[Download latest PDF](../../releases/latest/download/resume.pdf) — or browse the compiled artifact under the [Actions](../../actions) tab.
+| Variant | Download |
+|---|---|
+| Industry | [cv_industry.pdf](../../releases/latest/download/cv_industry.pdf) |
+| Research / Academic | [cv_research_academic.pdf](../../releases/latest/download/cv_research_academic.pdf) |
+
+Or browse compiled artifacts under the [Actions](../../actions) tab.
 
 ---
 
