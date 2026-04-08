@@ -119,7 +119,7 @@
 %-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
 \small{
-    Applied Machine Learning \& Systems Engineer specializing in Core ML architectures and Cybersecurity. Officially admitted to the M.Sc. (Research) program at Universit\'{e} Laval for Fall 2026. Proven ability to bridge theoretical Deep Learning with low-level systems engineering (Rust, Bash) to optimize, scale, and secure AI models.
+    Engineering student specializing in Machine Learning and Cybersecurity, with research experience in Graph Neural Networks and ML Systems. Admitted to the M.Sc. (Research) program at Universit\'{e} Laval for Fall 2026.
 }
 \vspace{-12pt}
 
@@ -139,7 +139,7 @@
     {M.Eng. in Artificial Intelligence \& Cybersecurity (Grande \'{E}cole)}{2024 -- 2027}
     \resumeItemListStart
       \resumeItem{\textbf{Current GPA: 16.08/20} (Top tier of cohort).}
-      \resumeItem{\textbf{Key Excellence Grades:} Introduction to Cybersecurity (19.6/20), Software Security (19.5/20), Deep Learning (19.0/20), Graph Algorithms (18.0/20).}
+      \resumeItem{\textbf{Key Grades:} Introduction to Cybersecurity (19.6/20), Software Security (19.5/20), Deep Learning (19.0/20), Graph Algorithms (18.0/20).}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -155,13 +155,13 @@
 \section{Research \& Applied Engineering Experience}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Research Assistant (ML Systems \& Graph Neural Networks)}{Nov. 2025 -- Present}
+    {Tremplin Recherche -- Research Initiation (ML Systems \& Graph Neural Networks)}{Nov. 2025 -- Present}
     {Universit\'{e} Gustave Eiffel / LAMA}{Champs-sur-Marne, France}
     \resumeItemListStart
       \resumeItem{Investigating deterministic graph sparsification to optimize Graph Neural Network (GNN) training and computational efficiency.}
-      \resumeItem{Engineering Focus: Architected a high-performance synthetic graph generator in \textbf{Rust} (\href{https://github.com/ilias-laoukili/synth-graph-rs}{\color{MidnightBlue}synth-graph-rs}) to overcome native Python computational bottlenecks.}
-      \resumeItem{Implemented parallelized execution pipelines using \textbf{Bash} scripting to mitigate Out-Of-Memory (\textbf{OOM mitigation}) errors during massive hyperparameter sweeps.}
-      \resumeItem{Designed empirical evaluation frameworks using PyTorch Geometric to analyze error landscape smoothing.}
+      \resumeItem{Built a synthetic graph generator in \textbf{Rust} (\href{https://github.com/ilias-laoukili/synth-graph-rs}{\color{MidnightBlue}synth-graph-rs}) to generate graphs with controlled structural properties for empirical evaluation.}
+      \resumeItem{Wrote \textbf{Bash} scripts to run hyperparameter sweeps sequentially, parallelizing lightweight experiments and isolating memory-intensive ones to prevent OOM errors.}
+      \resumeItem{Manuscript in preparation based on empirical findings.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -181,13 +181,13 @@
     {\textbf{Applied Software Security \& Vulnerability Exploitation} $|$ \emph{ESIEE Paris}}{}
     \resumeItemListStart
       \resumeItem{\textbf{Reverse Engineering:} Conducted low-level analysis on stripped x86-64 Linux binaries using GDB/objdump. Bypassed ptrace anti-debugging and code integrity constraints via byte patching, and developed automated keygens in C.}
-      \resumeItem{\textbf{Web Security:} Automated Blind SQL Injection data extraction by developing a custom Python exploit script, demonstrating practical database compromise capabilities.}
+      \resumeItem{\textbf{Web Security:} Automated Blind SQL Injection data extraction by developing a custom Python exploit script.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/ilias-laoukili/sentim-app}{\color{MidnightBlue}Sentim -- Deep Learning for Audio Emotion Analysis}} $|$ \emph{Python, Librosa, PyTorch, Streamlit}}{Nov 2025}
     \resumeItemListStart
-      \resumeItem{Engineered an end-to-end Machine Learning pipeline combining Digital Signal Processing (Librosa) with Deep Learning architectures.}
+      \resumeItem{Built an end-to-end pipeline for audio emotion recognition, from raw waveform processing to model training and deployment.}
       \resumeItem{Processed raw audio into 2D spectrograms and evaluated multiple architectures, including a custom 2-layer CNN and a fine-tuned ResNet, outperforming baseline Random Forest models. Deployed via a real-time Streamlit dashboard.}
     \resumeItemListEnd
 
@@ -197,7 +197,7 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Systems \& Low-Level}{: Rust, C, Bash (Parallel execution), Linux, Memory Management (OOM mitigation)} \\
+    \textbf{Systems \& Low-Level}{: Rust, C, Bash (Memory-aware execution), Linux, Memory-constrained computation} \\
     \textbf{Applied AI \& ML}{: Python, PyTorch Geometric, CNNs/ResNet, GNNs, RAG/LLM architectures, Scikit-learn} \\
     \textbf{Cybersecurity}{: Reverse Engineering (GDB, objdump), Vulnerability Exploitation, Wireshark, Software/System Security Auditing} \\
     \textbf{Tools \& DevOps}{: Git, Docker, CI/CD, MongoDB}
