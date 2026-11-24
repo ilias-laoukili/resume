@@ -76,6 +76,7 @@ MONTHS = {
 PRESENT = {"en": "Present", "fr": "Présent"}
 
 REQUIRED_TEX_PACKAGES = (
+    ("lmodern.sty", "lm"),
     ("fullpage.sty", "preprint"),
     ("titlesec.sty", "titlesec"),
     ("marvosym.sty", "marvosym"),
@@ -225,6 +226,7 @@ def render_preamble(track_cfg: dict[str, Any], lang: str) -> str:
         f"\\documentclass[letterpaper,{layout['font_size']}]{{article}}\n\n"
         "\\usepackage[T1]{fontenc}\n"
         "\\usepackage[utf8]{inputenc}\n"
+        "\\usepackage{lmodern}\n"
         "\\usepackage{latexsym}\n"
         "\\usepackage[empty]{fullpage}\n"
         "\\usepackage{titlesec}\n"
