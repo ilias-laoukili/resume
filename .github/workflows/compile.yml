@@ -4,7 +4,17 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/**'
+      - 'scripts/**'
       - 'src/**.tex'
+      - 'tests/**'
+      - '.github/workflows/compile.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'src/**.tex'
+      - 'tests/**'
       - '.github/workflows/compile.yml'
   workflow_dispatch:
 
@@ -19,38 +29,73 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile industry CV
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: src/cv_industry.tex
-          work_in_root_file_dir: true
-
-      - name: Compile academic CV
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: src/cv_research_academic.tex
-          work_in_root_file_dir: true
-
-      - name: Collect PDFs
+      - name: Check Python sync and unit tests
         run: |
-          mv src/cv_industry.pdf cv_industry.pdf
-          mv src/cv_research_academic.pdf cv_research_academic.pdf
+          python3 -c "import yaml" 2>/dev/null || pip install pyyaml
+          python3 scripts/cv.py check
+          python3 -m unittest discover -s tests -v
+
+      - name: Compile Industry CV (EN)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv_industry_en.tex
+          work_in_root_file_dir: true
+
+      - name: Compile Industry CV (FR)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv_industry_fr.tex
+          work_in_root_file_dir: true
+
+      - name: Compile Research / Academic CV (EN)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv_research_academic_en.tex
+          work_in_root_file_dir: true
+
+      - name: Compile Research / Academic CV (FR)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv_research_academic_fr.tex
+          work_in_root_file_dir: true
+
+      - name: Collect PDFs and enforce 1-page limit
+        run: |
+          mv src/cv_industry_en.pdf cv_industry_en.pdf
+          mv src/cv_industry_fr.pdf cv_industry_fr.pdf
+          mv src/cv_research_academic_en.pdf cv_research_academic_en.pdf
+          mv src/cv_research_academic_fr.pdf cv_research_academic_fr.pdf
+          python3 scripts/cv.py check-pages \
+            cv_industry_en.pdf \
+            cv_industry_fr.pdf \
+            cv_research_academic_en.pdf \
+            cv_research_academic_fr.pdf
+          # Backwards-compatible aliases for external links (e.g., laoukili.com)
+          cp cv_industry_en.pdf cv_industry.pdf
+          cp cv_research_academic_en.pdf cv_research_academic.pdf
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cvs
           path: |
-            cv_industry.pdf
-            cv_research_academic.pdf
+            cv_industry_en.pdf
+            cv_industry_fr.pdf
+            cv_research_academic_en.pdf
+            cv_research_academic_fr.pdf
           retention-days: 90
 
       - name: Publish to GitHub Release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest CVs
           files: |
+            cv_industry_en.pdf
+            cv_industry_fr.pdf
+            cv_research_academic_en.pdf
+            cv_research_academic_fr.pdf
             cv_industry.pdf
             cv_research_academic.pdf
           make_latest: true

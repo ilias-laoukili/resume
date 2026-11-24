@@ -1,12 +1,14 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+%------------------------------------------------------------------------------
+% GENERATED FILE -- DO NOT EDIT DIRECTLY.
+% Source of truth: data/profile.yaml
+% Regenerate with: python3 scripts/cv.py build
+% Template derived from Jake Gutierrez / sb2nov (MIT License).
+%------------------------------------------------------------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,31 +23,18 @@
 \usepackage{fontawesome5}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.55in}
+\addtolength{\textheight}{1.1in}
 
 \urlstyle{same}
 
@@ -53,19 +42,18 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section formatting
 \titleformat{\section}{
   \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Machine-readable / ATS-parsable PDF
 \pdfgentounicode=1
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1\vspace{-2pt}}
   }
 }
 
@@ -77,21 +65,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -100,81 +79,80 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-1pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Ilias Laoukili} \\ \vspace{1pt}
-    \small M.Sc. Student (Research Track) at Universit\'{e} Laval \\ \vspace{2pt}
+    \small M.Sc. Student (Research Track) at Université Laval \\ \vspace{2pt}
     \href{mailto:ilias.laoukili@ulaval.ca}{\color{MidnightBlue}\faEnvelope\ ilias.laoukili@ulaval.ca} $|$
     \href{https://github.com/ilias-laoukili}{\color{MidnightBlue}\faGithub\ github.com/ilias-laoukili} $|$
     \href{https://www.linkedin.com/in/ilias-laoukili}{\color{MidnightBlue}\faLinkedin\ in/ilias-laoukili} $|$
     \href{https://laoukili.com}{\color{MidnightBlue}\faGlobe\ laoukili.com}
 \end{center}
 
-%-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
 \small{
-    Engineering student specializing in Machine Learning and Cybersecurity, with research experience in Graph Neural Networks and ML Systems. Currently enrolled in the M.Sc. (Research) program at Universit\'{e} Laval, supervised by Prof. Talal Halabi.
+    Engineering student specializing in Machine Learning and Cybersecurity, with research experience in Graph Neural Networks and ML Systems. Currently enrolled in the M.Sc. (Research) program at Université Laval, supervised by Prof. Talal Halabi, and working part-time as an AI Advisor at the Ministère de la Cybersécurité et du Numérique (MCN).
 }
-\vspace{-12pt}
+\vspace{-4pt}
 
-%-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Universit\'{e} Laval}{Qu\'{e}bec, QC, Canada}
+    {Université Laval}{Québec, QC, Canada}
     {M.Sc. in Computer Science \& AI, Research Track (Dual Degree)}{Fall 2026 -- Present}
     \resumeItemListStart
-      \resumeItem{Research-based master's (Ma\^{i}trise avec m\'{e}moire), supervised by Prof. Talal Halabi.}
+      \resumeItem{Research-based master's (Maîtrise avec mémoire), supervised by Prof. Talal Halabi.}
       \resumeItem{Focus: Applied Machine Learning, Cybersecurity, and ML Systems.}
     \resumeItemListEnd
 
   \resumeSubheading
     {ESIEE Paris}{Noisy-le-Grand, France}
-    {M.Eng. in Artificial Intelligence \& Cybersecurity (Grande \'{E}cole)}{2024 -- 2027}
+    {M.Eng. in Artificial Intelligence \& Cybersecurity (Grande École)}{2024 -- 2027}
     \resumeItemListStart
       \resumeItem{\textbf{Current GPA: 16.08/20} (Top tier of cohort).}
       \resumeItem{\textbf{Key Grades:} Introduction to Cybersecurity (19.6/20), Software Security (19.5/20), Deep Learning (19.0/20), Graph Algorithms (18.0/20).}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Lyc\'{e}e Gustave Monod}{Enghien-les-Bains, France}
-    {Classes Pr\'{e}paratoires aux Grandes \'{E}coles (CPGE)}{2021 -- 2024}
+    {Lycée Gustave Monod}{Enghien-les-Bains, France}
+    {Classes Préparatoires aux Grandes Écoles (CPGE)}{2021 -- 2024}
     \resumeItemListStart
       \resumeItem{Intensive undergraduate preparation in Advanced Mathematics and Physics.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%-----------RESEARCH & APPLIED ENGINEERING EXPERIENCE-----------
 \section{Research \& Applied Engineering Experience}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Tremplin Recherche -- Research Initiation (ML Systems \& Graph Neural Networks)}{Nov. 2025 -- May 2026}
-    {Universit\'{e} Gustave Eiffel / LAMA}{Champs-sur-Marne, France}
+    {AI Advisor (Student Position)}{Nov. 2026 -- Present}
+    {Ministère de la Cybersécurité et du Numérique (MCN) -- AI Transformation Office}{Québec, QC, Canada}
     \resumeItemListStart
-      \resumeItem{Investigated deterministic graph sparsification to optimize Graph Neural Network (GNN) training and computational efficiency.}
-      \resumeItem{Built a synthetic graph generator in \textbf{Rust} (\href{https://github.com/ilias-laoukili/synth-graph-rs}{\color{MidnightBlue}synth-graph-rs}) to generate graphs with controlled structural properties for empirical evaluation.}
-      \resumeItem{Wrote \textbf{Bash} scripts to run hyperparameter sweeps sequentially, parallelizing lightweight experiments and isolating memory-intensive ones to prevent OOM errors.}
-      \resumeItem{Manuscript in preparation based on empirical findings.}
+      \resumeItem{Contributing to the ministry's AI engineering and industrialization capacity to deliver secure, operational, and reusable public-sector AI services.}
+      \resumeItem{Supporting architecture documentation, data preparation, prototyping, testing, and integration of applied AI solutions with security and MLOps specialists.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {R\&D Engineering Intern (Applied AI \& Systems)}{May 2026 -- July 2026}
+    {R\&D Engineering Intern (Applied AI \& Systems)}{May 2026 -- Jul. 2026}
     {Nanyang Polytechnic (NYP)}{Singapore}
     \resumeItemListStart
       \resumeItem{Developed an AI-powered RAG framework for green building energy simulations.}
       \resumeItem{Bridged NLP and engineering systems by making complex EnergyPlus architectures queryable via natural language.}
     \resumeItemListEnd
 
+  \resumeSubheading
+    {Tremplin Recherche -- Research Initiation (ML Systems \& Graph Neural Networks)}{Nov. 2025 -- May 2026}
+    {Université Gustave Eiffel / LAMA}{Champs-sur-Marne, France}
+    \resumeItemListStart
+      \resumeItem{Investigated deterministic graph sparsification to optimize Graph Neural Network (GNN) training and computational efficiency.}
+      \resumeItem{Built a synthetic graph and spectral sparsification library in \textbf{Rust} (\href{https://github.com/ilias-laoukili/plekton}{\color{MidnightBlue}plekton}) with zero-copy Python bindings for controlled empirical evaluation.}
+      \resumeItem{Wrote \textbf{Bash} scripts to run hyperparameter sweeps sequentially, parallelizing lightweight experiments and isolating memory-intensive ones to prevent OOM errors.}
+    \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
   \resumeProjectHeading
@@ -185,7 +163,7 @@
     \resumeItemListEnd
 
   \resumeProjectHeading
-    {\textbf{\href{https://github.com/ilias-laoukili/sentim-app}{\color{MidnightBlue}Sentim -- Deep Learning for Audio Emotion Analysis}} $|$ \emph{Python, Librosa, PyTorch, Streamlit}}{Nov 2025}
+    {\textbf{\href{https://github.com/ilias-laoukili/sentim-app}{\color{MidnightBlue}Sentim -- Deep Learning for Audio Emotion Analysis}} $|$ \emph{Python, Librosa, PyTorch, Streamlit}}{Nov. 2025}
     \resumeItemListStart
       \resumeItem{Built an end-to-end pipeline for audio emotion recognition, from raw waveform processing to model training and deployment.}
       \resumeItem{Processed raw audio into 2D spectrograms and evaluated multiple architectures, including a custom 2-layer CNN and a fine-tuned ResNet, outperforming baseline Random Forest models. Deployed via a real-time Streamlit dashboard.}
@@ -193,12 +171,11 @@
 
 \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Systems \& Low-Level}{: Rust, C, Bash (Memory-aware execution), Linux, Memory-constrained computation} \\
-    \textbf{Applied AI \& ML}{: Python, PyTorch Geometric, CNNs/ResNet, GNNs, RAG/LLM architectures, Scikit-learn} \\
+    \textbf{Systems \& Low-Level}{: Rust, PyO3, C, Bash (Memory-aware execution), Linux, Memory-constrained computation} \\
+    \textbf{Applied AI \& ML}{: Python, PyTorch, PyTorch Geometric, CNNs/ResNet, GNNs, RAG/LLM architectures, Scikit-learn} \\
     \textbf{Cybersecurity}{: Reverse Engineering (GDB, objdump), Vulnerability Exploitation, Wireshark, Software/System Security Auditing} \\
     \textbf{Tools \& DevOps}{: Git, Docker, CI/CD, MongoDB}
   }}

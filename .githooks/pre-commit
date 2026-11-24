@@ -1,0 +1,32 @@
+#!/bin/sh
+# Checks run by git before each commit: the commit is refused as soon as one of them fails.
+# Activate once per copy of the repository: git config core.hooksPath .githooks
+cd "$(git rev-parse --show-toplevel)" || exit 1
+PYTHON=python3
+[ -x .venv/bin/python ] && PYTHON="$(pwd)/.venv/bin/python"
+PATH="$PATH:/Library/TeX/texbin"
+
+refuse() {
+    echo "pre-commit: commit refused: $1" >&2
+    exit 1
+}
+
+# 1. What is checked is what is committed: no tracked change may stay outside the commit.
+git status --porcelain | grep -q '^.[^ ]' \
+    && refuse "some changes are not staged (see git status); add them or set them aside."
+
+# 2. data/profile.yaml is valid and all 4 LaTeX variants match it byte-for-byte.
+"$PYTHON" scripts/cv.py check \
+    || refuse "CV sources are out of sync or invalid; run 'python3 scripts/cv.py build', then stage the files."
+
+# 3. Unit tests pass.
+"$PYTHON" -m unittest discover -s tests -q \
+    || refuse "unit tests fail."
+
+# 4. When CV data, generator, or TeX files are in the commit, compile all 4 variants and verify each is 1 page.
+if git diff --cached --name-only -- data/ scripts/ src/ | grep -q '.'; then
+    "$PYTHON" scripts/cv.py compile \
+        || refuse "LaTeX compilation or 1-page verification failed."
+fi
+
+exit 0

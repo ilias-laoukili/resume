@@ -1,0 +1,483 @@
+# Canonical source of truth for all CV variants (Industry EN/FR, Research/Academic EN/FR).
+# After editing this file, regenerate the LaTeX sources and run checks:
+#   python3 scripts/cv.py build
+#   python3 scripts/cv.py check
+
+identity:
+  name: Ilias Laoukili
+  emails:
+    industry: ilias.laoukili@proton.me
+    academic: ilias.laoukili@ulaval.ca
+  links:
+    linkedin:
+      url: https://www.linkedin.com/in/ilias-laoukili
+      label_industry: linkedin.com/in/ilias-laoukili
+      label_academic: in/ilias-laoukili
+    github:
+      url: https://github.com/ilias-laoukili
+      label: github.com/ilias-laoukili
+    website:
+      url: https://laoukili.com
+      label: laoukili.com
+  location:
+    en: Québec City, QC, Canada
+    fr: Québec, QC, Canada
+  academic_tagline:
+    en: M.Sc. Student (Research Track) at Université Laval
+    fr: Étudiant à la maîtrise recherche (M.Sc.) à l'Université Laval
+
+variants:
+  industry:
+    file_prefix: cv_industry
+    email_key: industry
+    header_style: industry
+    layout:
+      font_size: 10pt
+      oddsidemargin: -0.5in
+      textwidth_add: 1.0in
+      topmargin: -0.55in
+      textheight_add: 1.1in
+      section_vspace: -5pt
+      subheading_vspace: -2pt
+      itemsep: -1pt
+    sections:
+      - key: summary
+        title:
+          en: Professional Summary
+          fr: Profil professionnel
+      - key: education
+        title:
+          en: Education
+          fr: Formation
+      - key: experience
+        title:
+          en: Experience
+          fr: Expérience professionnelle
+      - key: projects
+        title:
+          en: Projects
+          fr: Projets
+      - key: skills
+        title:
+          en: Technical Skills
+          fr: Compétences techniques
+      - key: activities
+        title:
+          en: Additional Activities
+          fr: Engagement associatif
+
+  research_academic:
+    file_prefix: cv_research_academic
+    email_key: academic
+    header_style: academic
+    layout:
+      font_size: 10pt
+      oddsidemargin: -0.5in
+      textwidth_add: 1.0in
+      topmargin: -0.55in
+      textheight_add: 1.1in
+      section_vspace: -6pt
+      subheading_vspace: -3pt
+      itemsep: -1pt
+    sections:
+      - key: summary
+        title:
+          en: Professional Summary
+          fr: Résumé de profil
+      - key: education
+        title:
+          en: Education
+          fr: Formation
+      - key: experience
+        title:
+          en: Research & Applied Engineering Experience
+          fr: Expérience en recherche et ingénierie appliquée
+      - key: projects
+        title:
+          en: Projects
+          fr: Projets techniques
+      - key: skills
+        title:
+          en: Technical Skills
+          fr: Compétences techniques
+
+summary:
+  industry:
+    en: >-
+      AI & Cybersecurity engineering student and M.Sc. (Research) candidate at Université Laval,
+      currently serving as an AI Advisor at the Ministère de la Cybersécurité et du Numérique (MCN).
+      Hands-on experience building RAG, GNN, and high-performance Rust/Python ML systems across
+      research at LAMA (Université Gustave Eiffel) and an R&D internship at Nanyang Polytechnic, Singapore.
+    fr: >-
+      Élève-ingénieur en IA et cybersécurité et étudiant à la maîtrise recherche (M.Sc.) à l'Université Laval,
+      actuellement conseiller en intelligence artificielle au ministère de la Cybersécurité et du Numérique (MCN).
+      Expérience pratique en systèmes RAG, GNN et bibliothèques Rust/Python haute performance (recherche au LAMA,
+      stage R&D à Nanyang Polytechnic, Singapour).
+  research_academic:
+    en: >-
+      Engineering student specializing in Machine Learning and Cybersecurity, with research experience in
+      Graph Neural Networks and ML Systems. Currently enrolled in the M.Sc. (Research) program at Université Laval,
+      supervised by Prof. Talal Halabi, and working part-time as an AI Advisor at the Ministère de la Cybersécurité
+      et du Numérique (MCN).
+    fr: >-
+      Élève-ingénieur spécialisé en apprentissage automatique et cybersécurité, avec une expérience de recherche
+      en réseaux de neurones sur graphes (GNN) et systèmes ML. Actuellement inscrit à la maîtrise recherche (M.Sc.)
+      à l'Université Laval sous la direction du Prof. Talal Halabi, et conseiller en IA (emploi étudiant) au
+      ministère de la Cybersécurité et du Numérique (MCN).
+
+education:
+  - id: ulaval
+    variants: [industry, research_academic]
+    institution:
+      en: Université Laval
+      fr: Université Laval
+    location:
+      en: Québec, QC, Canada
+      fr: Québec, QC, Canada
+    degree:
+      industry:
+        en: M.Sc. in Computer Science, Research Track (Mémoire) -- Dual Degree
+        fr: Maîtrise en informatique avec mémoire (M.Sc. recherche) -- Double diplôme
+      research_academic:
+        en: M.Sc. in Computer Science & AI, Research Track (Dual Degree)
+        fr: Maîtrise en informatique et IA avec mémoire (Double diplôme)
+    dates:
+      start_term:
+        en: Fall 2026
+        fr: Automne 2026
+      end: null
+    bullets:
+      industry:
+        en:
+          - Pursuing a research-based master's in Computer Science/AI, supervised by Prof. Talal Halabi, complementing the French engineering curriculum.
+        fr:
+          - Maîtrise recherche en informatique et IA, sous la direction du Prof. Talal Halabi, en complément du cursus d'ingénieur.
+      research_academic:
+        en:
+          - Research-based master's (Maîtrise avec mémoire), supervised by Prof. Talal Halabi.
+          - "Focus: Applied Machine Learning, Cybersecurity, and ML Systems."
+        fr:
+          - Maîtrise recherche avec mémoire, sous la direction du Prof. Talal Halabi.
+          - "Axes : apprentissage automatique appliqué, cybersécurité et systèmes ML."
+
+  - id: esiee
+    variants: [industry, research_academic]
+    institution:
+      en: ESIEE Paris
+      fr: ESIEE Paris
+    location:
+      en: Noisy-le-Grand, France
+      fr: Noisy-le-Grand, France
+    degree:
+      en: M.Eng. in Artificial Intelligence & Cybersecurity (Grande École)
+      fr: Diplôme d'ingénieur en Intelligence Artificielle et Cybersécurité (Grande École)
+    dates:
+      start: "2024"
+      end: "2027"
+    bullets:
+      industry:
+        en:
+          - "State-recognized engineering degree. Curriculum: Machine Learning, Computer Vision, Data Science, Cybersecurity."
+        fr:
+          - "Diplôme d'ingénieur reconnu par l'État (CTI). Cours : apprentissage automatique, vision par ordinateur, science des données, cybersécurité."
+      research_academic:
+        en:
+          - "**Current GPA: 16.08/20** (Top tier of cohort)."
+          - "**Key Grades:** Introduction to Cybersecurity (19.6/20), Software Security (19.5/20), Deep Learning (19.0/20), Graph Algorithms (18.0/20)."
+        fr:
+          - "**Moyenne actuelle : 16,08/20** (tête de promotion)."
+          - "**Notes clés :** Introduction à la cybersécurité (19,6/20), Sécurité logicielle (19,5/20), Deep Learning (19,0/20), Algorithmique des graphes (18,0/20)."
+
+  - id: cpge
+    variants: [industry, research_academic]
+    institution:
+      en: Lycée Gustave Monod
+      fr: Lycée Gustave Monod
+    location:
+      en: Enghien-les-Bains, France
+      fr: Enghien-les-Bains, France
+    degree:
+      en: Classes Préparatoires aux Grandes Écoles (CPGE)
+      fr: Classes Préparatoires aux Grandes Écoles (CPGE)
+    dates:
+      start: "2021"
+      end: "2024"
+    bullets:
+      industry:
+        en:
+          - Intensive preparation in Math & Physics (MPSI/PCSI/PC) for French engineering school entrance exams.
+        fr:
+          - Préparation intensive en mathématiques et physique (MPSI/PCSI/PC) aux concours des grandes écoles d'ingénieurs.
+      research_academic:
+        en:
+          - Intensive undergraduate preparation in Advanced Mathematics and Physics.
+        fr:
+          - Formation intensive de premier cycle en mathématiques avancées et physique.
+
+experience:
+  - id: mcn
+    variants: [industry, research_academic]
+    role:
+      en: AI Advisor (Student Position)
+      fr: Conseiller en intelligence artificielle (Emploi étudiant)
+    organization:
+      en: Ministère de la Cybersécurité et du Numérique (MCN) -- AI Transformation Office
+      fr: Ministère de la Cybersécurité et du Numérique (MCN) -- Bureau de la transformation de l'IA
+    location:
+      en: Québec, QC, Canada
+      fr: Québec, QC, Canada
+    dates:
+      start: "2026-11"
+      end: null
+    bullets:
+      industry:
+        en:
+          - Contributing to the ministry's AI engineering and industrialization capacity to deliver secure, operational, and reusable AI digital services.
+          - Supporting architecture documentation, data preparation, prototyping, testing, and integration of applied AI solutions alongside architecture, data, security, and MLOps specialists.
+        fr:
+          - Contribution à la capacité ministérielle de réalisation et d'industrialisation de services numériques IA sécurisés, opérationnels et réutilisables.
+          - Soutien à la documentation d'architecture, la préparation des données, le prototypage, les essais et l'intégration de solutions IA avec des spécialistes (architecture, données, sécurité, MLOps).
+      research_academic:
+        en:
+          - Contributing to the ministry's AI engineering and industrialization capacity to deliver secure, operational, and reusable public-sector AI services.
+          - Supporting architecture documentation, data preparation, prototyping, testing, and integration of applied AI solutions with security and MLOps specialists.
+        fr:
+          - Contribution à la capacité ministérielle de réalisation et d'industrialisation de services numériques IA sécurisés et réutilisables pour le secteur public.
+          - Soutien à la documentation d'architecture, la préparation des données, le prototypage, les essais et l'intégration de solutions IA avec des spécialistes en sécurité et MLOps.
+
+  - id: nyp
+    variants: [industry, research_academic]
+    role:
+      industry:
+        en: R&D Engineering Intern
+        fr: Stagiaire ingénieur R&D
+      research_academic:
+        en: R&D Engineering Intern (Applied AI & Systems)
+        fr: Stagiaire ingénieur R&D (IA appliquée et systèmes)
+    organization:
+      en: Nanyang Polytechnic (NYP)
+      fr: Nanyang Polytechnic (NYP)
+    location:
+      en: Singapore
+      fr: Singapour
+    dates:
+      start: "2026-05"
+      end: "2026-07"
+    bullets:
+      industry:
+        en:
+          - Developed an AI-powered system for green building energy simulation, engineering a **RAG** framework to make **EnergyPlus** accessible via natural language queries.
+          - Collaborated with research teams to optimize energy efficiency simulations through applied AI algorithms.
+        fr:
+          - Développement d'un système IA pour la simulation énergétique de bâtiments durables, avec conception d'un framework **RAG** rendant **EnergyPlus** interrogeable en langage naturel.
+          - Collaboration avec les équipes de recherche pour optimiser les simulations d'efficacité énergétique par des algorithmes d'IA appliquée.
+      research_academic:
+        en:
+          - Developed an AI-powered RAG framework for green building energy simulations.
+          - Bridged NLP and engineering systems by making complex EnergyPlus architectures queryable via natural language.
+        fr:
+          - Développement d'un framework RAG pour les simulations énergétiques de bâtiments durables.
+          - Passerelle entre traitement du langage naturel et systèmes d'ingénierie en rendant les architectures **EnergyPlus** interrogeables en langage naturel.
+
+  - id: lama
+    variants: [industry, research_academic]
+    role:
+      industry:
+        en: Research Assistant (Tremplin Recherche)
+        fr: Assistant de recherche (Tremplin Recherche)
+      research_academic:
+        en: Tremplin Recherche -- Research Initiation (ML Systems & Graph Neural Networks)
+        fr: Tremplin Recherche -- Initiation à la recherche (Systèmes ML et GNN)
+    organization:
+      en: Université Gustave Eiffel / LAMA
+      fr: Université Gustave Eiffel / LAMA
+    location:
+      en: Champs-sur-Marne, France
+      fr: Champs-sur-Marne, France
+    dates:
+      start: "2025-11"
+      end: "2026-05"
+    bullets:
+      industry:
+        en:
+          - Investigated trade-offs between Graph Neural Network (GNN) performance and computational efficiency via graph sparsification.
+          - Analyzed graph topology and sparsification patterns to reduce GNN computational overhead without accuracy degradation.
+        fr:
+          - Étude des compromis entre performance et efficacité de calcul des réseaux de neurones sur graphes (GNN) via la sparsification de graphes.
+          - Analyse de la topologie des graphes et des schémas de sparsification afin de réduire le coût de calcul sans perte de précision.
+      research_academic:
+        en:
+          - Investigated deterministic graph sparsification to optimize Graph Neural Network (GNN) training and computational efficiency.
+          - Built a synthetic graph and spectral sparsification library in **Rust** ([plekton](https://github.com/ilias-laoukili/plekton)) with zero-copy Python bindings for controlled empirical evaluation.
+          - Wrote **Bash** scripts to run hyperparameter sweeps sequentially, parallelizing lightweight experiments and isolating memory-intensive ones to prevent OOM errors.
+        fr:
+          - Étude de la sparsification déterministe de graphes pour optimiser l'entraînement et l'efficacité de calcul des GNN.
+          - Développement d'une bibliothèque en **Rust** ([plekton](https://github.com/ilias-laoukili/plekton)) avec bindings Python zero-copy pour générer des graphes contrôlés et évaluer la sparsification spectrale.
+          - Écriture de scripts **Bash** orchestrant les balayages d'hyperparamètres (parallélisation des essais légers, isolation des expériences gourmandes en mémoire pour éviter les erreurs OOM).
+
+  - id: tutoring
+    variants: [industry]
+    role:
+      en: Academic Tutor & Private Instructor
+      fr: Tuteur académique et professeur particulier
+    organization:
+      en: Complétude, Parkours, ESIEE Paris
+      fr: Complétude, Parkours, ESIEE Paris
+    location:
+      en: Paris Region, France
+      fr: Île-de-France, France
+    dates:
+      start: "2021-09"
+      end: "2026-05"
+    bullets:
+      en:
+        - Tutored 45+ students in Math/CS, improving academic performance by 30% through personalized guidance.
+      fr:
+        - Accompagnement de plus de 45 élèves en mathématiques et informatique, avec une amélioration moyenne des résultats de 30%.
+
+projects:
+  - id: plekton
+    variants: [industry]
+    title:
+      en: plekton -- Synthetic Graph & Spectral Sparsification Library
+      fr: plekton -- Bibliothèque Rust/Python de graphes synthétiques et sparsification
+    url: https://github.com/ilias-laoukili/plekton
+    tech:
+      en: Rust, PyO3, Python, GNNs
+      fr: Rust, PyO3, Python, GNN
+    dates:
+      single: "2026"
+    bullets:
+      en:
+        - Engineered a pure-Rust library with zero-copy Python bindings for synthetic graph generation, stochastic blockmodel fitting, structural metrics, and spectral sparsification.
+        - Designed for reproducible, high-throughput GNN benchmarking with direct interoperability with Python ML pipelines.
+      fr:
+        - Conception d'une bibliothèque en Rust pur avec bindings Python zero-copy pour la génération de graphes synthétiques, l'ajustement de modèles à blocs stochastiques, les métriques structurelles et la sparsification spectrale.
+        - Pensée pour le benchmarking reproductible et rapide de GNN avec intégration directe aux pipelines ML Python.
+
+  - id: software_security
+    variants: [research_academic]
+    title:
+      en: Applied Software Security & Vulnerability Exploitation
+      fr: Sécurité logicielle appliquée et exploitation de vulnérabilités
+    url: null
+    tech:
+      en: ESIEE Paris
+      fr: ESIEE Paris
+    dates: null
+    bullets:
+      en:
+        - "**Reverse Engineering:** Conducted low-level analysis on stripped x86-64 Linux binaries using GDB/objdump. Bypassed ptrace anti-debugging and code integrity constraints via byte patching, and developed automated keygens in C."
+        - "**Web Security:** Automated Blind SQL Injection data extraction by developing a custom Python exploit script."
+      fr:
+        - "**Rétro-ingénierie :** Analyse bas niveau de binaires Linux x86-64 strippés avec GDB/objdump ; contournement de protections anti-débogage (`ptrace`) et d'intégrité par patch binaire, et écriture de générateurs de clés automatisés en C."
+        - "**Sécurité Web :** Automatisation de l'extraction de données par injection SQL aveugle (Blind SQLi) via un script d'exploitation Python dédié."
+
+  - id: sentim
+    variants: [industry, research_academic]
+    title:
+      industry:
+        en: Sentim -- AI-Powered Audio Emotion Analysis
+        fr: Sentim -- Analyse d'émotions audio par IA
+      research_academic:
+        en: Sentim -- Deep Learning for Audio Emotion Analysis
+        fr: Sentim -- Deep Learning pour la reconnaissance d'émotions audio
+    url: https://github.com/ilias-laoukili/sentim-app
+    tech:
+      industry:
+        en: Python, PyTorch, Librosa, Streamlit
+        fr: Python, PyTorch, Librosa, Streamlit
+      research_academic:
+        en: Python, Librosa, PyTorch, Streamlit
+        fr: Python, Librosa, PyTorch, Streamlit
+    dates:
+      single: "2025-11"
+    bullets:
+      industry:
+        en:
+          - Built an end-to-end audio emotion analysis platform classifying 8 emotions from speech (RAVDESS), combining DSP features (MFCCs, Chroma, Tonnetz) with 2D-spectrogram CNN/ResNet models outperforming Random Forest baselines.
+          - Deployed an interactive Streamlit dashboard for real-time acoustic visualization and prosody manipulation.
+        fr:
+          - Conception d'une plateforme complète de classification de 8 émotions vocales (RAVDESS), combinant extraction DSP (MFCC, Chroma, Tonnetz) et modèles CNN/ResNet sur spectrogrammes 2D surpassant la baseline Random Forest.
+          - Déploiement d'un tableau de bord Streamlit interactif pour la visualisation acoustique en temps réel et la manipulation prosodique.
+      research_academic:
+        en:
+          - Built an end-to-end pipeline for audio emotion recognition, from raw waveform processing to model training and deployment.
+          - Processed raw audio into 2D spectrograms and evaluated multiple architectures, including a custom 2-layer CNN and a fine-tuned ResNet, outperforming baseline Random Forest models. Deployed via a real-time Streamlit dashboard.
+        fr:
+          - Pipeline complet de reconnaissance d'émotions audio, du prétraitement du signal brut jusqu'à l'entraînement et au déploiement.
+          - Conversion en spectrogrammes 2D et évaluation comparative (CNN 2 couches sur mesure et ResNet affiné surpassant la baseline Random Forest), avec tableau de bord Streamlit temps réel.
+
+skills:
+  industry:
+    - label:
+        en: Core & AI
+        fr: IA & Langages clés
+      items:
+        en: Python, Rust, SQL, PyTorch, PyTorch Geometric, Scikit-learn, GNNs, RAG/LLM, DSP (Librosa)
+        fr: Python, Rust, SQL, PyTorch, PyTorch Geometric, Scikit-learn, GNN, RAG/LLM, DSP (Librosa)
+    - label:
+        en: Tools & Dev
+        fr: Outils & DevOps
+      items:
+        en: Git/GitHub, Docker, CI/CD, PyO3, Streamlit, Hydra, Linux, Wireshark, MongoDB, EnergyPlus
+        fr: Git/GitHub, Docker, CI/CD, PyO3, Streamlit, Hydra, Linux, Wireshark, MongoDB, EnergyPlus
+    - label:
+        en: Certifications
+        fr: Certifications
+      items:
+        en: "MongoDB Associate Developer, Harvard CS50's *Introduction to AI with Python*"
+        fr: "MongoDB Associate Developer, Harvard CS50's *Introduction to AI with Python*"
+    - label:
+        en: Languages
+        fr: Langues
+      items:
+        en: "French (Native), German (C1 -- Abibac), English (Professional working proficiency -- TOEIC 940/990)"
+        fr: "Français (Langue maternelle), Allemand (C1 -- Abibac), Anglais (Compétence professionnelle -- TOEIC 940/990)"
+
+  research_academic:
+    - label:
+        en: Systems & Low-Level
+        fr: Systèmes & Bas niveau
+      items:
+        en: Rust, PyO3, C, Bash (Memory-aware execution), Linux, Memory-constrained computation
+        fr: Rust, PyO3, C, Bash (exécution maîtrisée en mémoire), Linux, calcul sous contrainte mémoire
+    - label:
+        en: Applied AI & ML
+        fr: IA appliquée & ML
+      items:
+        en: Python, PyTorch, PyTorch Geometric, CNNs/ResNet, GNNs, RAG/LLM architectures, Scikit-learn
+        fr: Python, PyTorch, PyTorch Geometric, CNN/ResNet, GNN, architectures RAG/LLM, Scikit-learn
+    - label:
+        en: Cybersecurity
+        fr: Cybersécurité
+      items:
+        en: Reverse Engineering (GDB, objdump), Vulnerability Exploitation, Wireshark, Software/System Security Auditing
+        fr: Rétro-ingénierie (GDB, objdump), exploitation de vulnérabilités, Wireshark, audit de sécurité logicielle/système
+    - label:
+        en: Tools & DevOps
+        fr: Outils & DevOps
+      items:
+        en: Git, Docker, CI/CD, MongoDB
+        fr: Git, Docker, CI/CD, MongoDB
+
+activities:
+  - id: red_cross
+    variants: [industry]
+    role:
+      en: Volunteer
+      fr: Bénévole
+    organization:
+      en: French Red Cross
+      fr: Croix-Rouge française
+    location:
+      en: Puteaux, France
+      fr: Puteaux, France
+    dates:
+      start: "2023"
+      end: "2026-06"
+    bullets:
+      en:
+        - Contributed to community outreach and logistics, supporting over 200 families.
+      fr:
+        - Contribution à l'aide sociale et à la logistique de terrain auprès de plus de 200 familles.
