@@ -262,7 +262,7 @@ experience:
       fr: Singapour
     dates:
       start: "2026-05"
-      end: "2026-07"
+      end: "2026-08"
     bullets:
       industry:
         en:
@@ -432,8 +432,8 @@ skills:
         en: Languages
         fr: Langues
       items:
-        en: "French (Native), German (C1 -- Abibac), English (Professional working proficiency -- TOEIC 940/990)"
-        fr: "Français (Langue maternelle), Allemand (C1 -- Abibac), Anglais (Compétence professionnelle -- TOEIC 940/990)"
+        en: "French (Native), German (C1 -- Abibac), English (Professional working proficiency -- TOEIC 935/990)"
+        fr: "Français (Langue maternelle), Allemand (C1 -- Abibac), Anglais (Compétence professionnelle -- TOEIC 935/990)"
 
   research_academic:
     - label:
