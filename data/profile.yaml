@@ -336,6 +336,25 @@ experience:
         - Accompagnement de plus de 45 élèves en mathématiques et informatique, avec une amélioration moyenne des résultats de 30%.
 
 projects:
+  - id: manis
+    variants: [industry, research_academic]
+    title:
+      en: manis -- Offline Linux Hardening Audit CLI
+      fr: manis -- Audit de durcissement Linux hors ligne
+    url: https://github.com/ilias-laoukili/manis
+    tech:
+      en: Rust, Linux, CIS/ANSSI, SARIF
+      fr: Rust, Linux, CIS/ANSSI, SARIF
+    dates:
+      single: "2026"
+    bullets:
+      en:
+        - Built a safe-Rust static binary (~1.9 MB, zero subprocesses) for offline Linux image and rootfs audits without root privileges.
+        - Implemented 103 rules (CIS Ubuntu 24.04, ANSSI-BP-028, NIST; Debian family + `linux-generic`), SARIF 2.1.0, and drift diff verified in CI across 5 distros.
+      fr:
+        - Binaire Rust statique sûr (~1,9 Mo, zéro sous-processus) auditant images et rootfs Linux hors ligne sans droits root.
+        - 103 règles (CIS Ubuntu 24.04, ANSSI-BP-028, NIST ; famille Debian et `linux-generic`), SARIF 2.1.0 et `diff` testés en CI sur 5 distros.
+
   - id: plekton
     variants: [industry]
     title:

@@ -158,6 +158,13 @@
 \section{Projets techniques}
 \resumeSubHeadingListStart
   \resumeProjectHeading
+    {\textbf{\href{https://github.com/ilias-laoukili/manis}{\color{MidnightBlue}manis -- Audit de durcissement Linux hors ligne}} $|$ \emph{Rust, Linux, CIS/ANSSI, SARIF}}{2026}
+    \resumeItemListStart
+      \resumeItem{Binaire Rust statique sûr (\textasciitilde{}1,9 Mo, zéro sous-processus) auditant images et rootfs Linux hors ligne sans droits root.}
+      \resumeItem{103 règles (CIS Ubuntu 24.04, ANSSI-BP-028, NIST ; famille Debian et \texttt{linux-generic}), SARIF 2.1.0 et \texttt{diff} testés en CI sur 5 distros.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
     {\textbf{Sécurité logicielle appliquée et exploitation de vulnérabilités} $|$ \emph{ESIEE Paris}}{}
     \resumeItemListStart
       \resumeItem{\textbf{Rétro-ingénierie :} Analyse bas niveau de binaires Linux x86-64 strippés avec GDB/objdump ; contournement de protections anti-débogage (\texttt{ptrace}) et d'intégrité par patch binaire, et écriture de générateurs de clés automatisés en C.}
